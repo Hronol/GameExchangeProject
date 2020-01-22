@@ -12,6 +12,15 @@ public class GamesData {
         this.gameYear = gameYear;
         this.gameCategory = gameCategory;
     }
+
+    public enum gameCategoryEnum{
+        FPS ,
+        Akcja,
+        Wyścigi,
+        RPG,
+        Strategia,
+        Symulator
+    }
 }
 
 
