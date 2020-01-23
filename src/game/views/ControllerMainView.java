@@ -17,7 +17,11 @@ public class ControllerMainView {
                 clientWindow.show();
         }
 
-        public void goToAdminView(ActionEvent event){
-
+        public void goToAdminView(ActionEvent event) throws IOException {
+                Parent adminViewParent = FXMLLoader.load(getClass().getResource("adminViewPanel.fxml"));
+                Stage adminWindow = (Stage)((Node)event.getSource()).getScene().getWindow();
+                adminWindow.setScene(new Scene(adminViewParent));
+                adminWindow.show();
         }
+
 }
