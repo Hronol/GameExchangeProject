@@ -1,0 +1,31 @@
+Wypozyczalnia gier:
+
+1. Dane klienta:
+	- imie
+	- nazwisko
+	- email
+	- telefon
+	
+2. Dane gry:
+	- tytul
+	- platforma
+	- rok wydania
+	- gatunek
+
+2a. Dane gatunku:
+	- FPS
+	- Akcja
+	- Wyścigi
+	- RPG
+	- Strategia
+	- Symulator
+	
+3. Ogólny zarys:
+	Platforma umozliwiająca wypożyczanie gier po przez aplikację desktopową. 
+	Możliwości jakie daje aplikacja klientowi i usługodawcy (admina):
+	- Klient: przeglądanie, filtrowanie i wypożyczanie dostępnych tytułów, również ma możliwość rezerwacji już wypożyczonej gry
+	- Usługodawca: modyfikowanie, usuwanie i dodawanie nowych danych klienta i gier, aktualizowanie statusów wypożyczeń
+	
+4. Dane techniczne:
+	Wszystkie informacje dotyczące danych klienta i gier przechowywane są w bazie danych xxx
+	Jest to aplikacja desktopowa stworzona w języku Java, przy użyciu biblioteki Java FX

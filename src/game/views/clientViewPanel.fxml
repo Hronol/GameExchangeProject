@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.views.ControllerClientView">
+    <children>
+        <TableView layoutY="88.0" prefHeight="712.0" prefWidth="800.0">
+            <columns>
+                <TableColumn editable="false" prefWidth="200.0" reorderable="false" resizable="false" text="Tytuł" />
+                <TableColumn editable="false" prefWidth="200.0" reorderable="false" resizable="false" text="Platforma" />
+                <TableColumn editable="false" prefWidth="200.0" reorderable="false" resizable="false" text="Rok wydania" />
+                <TableColumn editable="false" prefWidth="200.0" reorderable="false" resizable="false" text="Gatunek" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <Button alignment="CENTER" layoutX="332.0" layoutY="39.0" mnemonicParsing="false" text="Search" />
+        <ChoiceBox layoutX="617.0" layoutY="39.0" prefWidth="150.0" />
+        <ChoiceBox layoutX="418.0" layoutY="39.0" prefHeight="25.0" prefWidth="166.0" />
+        <TextField layoutX="14.0" layoutY="39.0" prefHeight="25.0" prefWidth="292.0" />
+      <Button fx:id="quitBtn" layoutX="759.0" layoutY="2.0" mnemonicParsing="false" onAction="#quitButton" text="Quit" />
+    </children>
+</AnchorPane>
