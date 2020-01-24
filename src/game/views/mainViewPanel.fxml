@@ -13,7 +13,7 @@
         <ImageView fitHeight="800.0" fitWidth="1509.0" layoutX="-33.0" pickOnBounds="true" preserveRatio="true"
                    x="-350.0">
             <image>
-                <Image url="file:/C:/Users/Hronol/IdeaProjects/GameExchangeProject/out/Images/video-game-controllers-640.jpg"/>
+                <Image url="file:/C:/Users/Hronol/IdeaProjects/GameExchangeProject/src/Images/video-game-controllers-640.jpg"/>
             </image>
         </ImageView>
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="200.0" text="Wypożyczalnia Gier"
