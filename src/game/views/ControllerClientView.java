@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.WindowEvent;
 
@@ -17,32 +18,17 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class ControllerClientView implements Initializable {
+public class ControllerClientView{
 
-    public TableView<GamesData> tableView;
-    public TableColumn<GamesData, String> titleColumn;
-    public TableColumn<GamesData, String> platformColumn;
-    public TableColumn<GamesData, Integer> dateColumn;
-    public TableColumn<GamesData, String> genreColumn;
-    public TableColumn<GamesData, Double> priceColumn;
+    public TextField searchField;
+    public ControllerAdminGameView controllerAdminGameView = new ControllerAdminGameView();
 
     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        titleColumn.setCellValueFactory(new PropertyValueFactory<>("GameTitle"));
-        platformColumn.setCellValueFactory(new PropertyValueFactory<>("GamePlatform"));
-        dateColumn.setCellValueFactory(new PropertyValueFactory<>("GameYear"));
-        genreColumn.setCellValueFactory(new PropertyValueFactory<>("GameCategory"));
-        priceColumn.setCellValueFactory(new PropertyValueFactory<>("GamePrice"));
-        tableView.setItems(observableList);
+    //wyszukiwanie
+    public void searchText(){
+        controllerAdminGameView.searchMethod();
     }
-
-    ObservableList<GamesData> observableList = FXCollections.observableArrayList(
-            new GamesData("GTA5", "PS4", 2014, "Akcja", 199.99),
-            new GamesData("Mario Bross", "Xbox One", 2011, "Przygodowa", 239.99),
-            new GamesData("Call of Duty", "PC", 2019, "Strzelanka", 99.99)
-    );
 
     EventHandler<ActionEvent> eventHandler = new EventHandler<ActionEvent>() {
         @Override
@@ -50,6 +36,8 @@ public class ControllerClientView implements Initializable {
             alert.show();
         }
     };
+
+
 
     public void quitButton(ActionEvent event) {
 //        eventHandler.handle();

@@ -23,5 +23,4 @@ public class ControllerMainView {
                 adminWindow.setScene(new Scene(adminViewParent));
                 adminWindow.show();
         }
-
 }
