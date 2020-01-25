@@ -6,14 +6,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.Node;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -23,33 +25,26 @@ public class ControllerClientView{
     public TextField searchField;
     public ControllerAdminGameView controllerAdminGameView = new ControllerAdminGameView();
 
-    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+
 
     //wyszukiwanie
     public void searchText(){
         controllerAdminGameView.searchMethod();
     }
 
-    EventHandler<ActionEvent> eventHandler = new EventHandler<ActionEvent>() {
-        @Override
-        public void handle(ActionEvent event) {
-            alert.show();
-        }
-    };
-
-
-
     public void quitButton(ActionEvent event) {
-//        eventHandler.handle();
-        alert.setContentText("Czy na pewno chcesz wyjść?");
-        alert.show();
+          Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Potwierdź", ButtonType.OK, ButtonType.CANCEL);
+          Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+          alert.setContentText("Czy na pewno chcesz wyjść?");
+          alert.initModality(Modality.APPLICATION_MODAL);
+          alert.initOwner(stage);
+          alert.showAndWait();
 
-        if (alert.getResult().getButtonData().isCancelButton()) {
-        }
-        else {
-            Platform.exit();
-            System.exit(0);
-        }
+          if (alert.getResult() == ButtonType.OK) {
+              Platform.exit();
+        } else {
+              alert.close();
+          }
     }
 
 }

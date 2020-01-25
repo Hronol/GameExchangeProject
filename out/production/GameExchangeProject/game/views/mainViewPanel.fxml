@@ -10,7 +10,7 @@
     <children>
         <ImageView fitHeight="800.0" fitWidth="1509.0" layoutX="-33.0" pickOnBounds="true" preserveRatio="true" x="-350.0">
             <image>
-                <Image url="file:/C:/Users/Hronol/IdeaProjects/GameExchangeProject/src/Images/video-game-controllers-640.jpg" />
+                <Image url="file:/C:/Users/hrono/IdeaProjects/GameExchangeProject/src/Images/video-game-controllers-640.jpg" />
             </image>
         </ImageView>
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="200.0" text="Wypożyczalnia Gier" textAlignment="CENTER" underline="true">
@@ -29,5 +29,6 @@
         </Label>
         <Button fx:id="admin_button" layoutX="179.0" layoutY="591.0" mnemonicParsing="false" onAction="#goToAdminView" scaleX="3.0" scaleY="2.0" text="Administrator" />
         <Button fx:id="client_button" layoutX="586.0" layoutY="591.0" mnemonicParsing="false" onAction="#goToClientView" scaleX="3.0" scaleY="2.0" text="Klient" />
+        <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="250.0" layoutY="400.0" prefHeight="50.0" prefWidth="300.0" promptText="Podaj hasło" visible="false" />
     </children>
 </Pane>

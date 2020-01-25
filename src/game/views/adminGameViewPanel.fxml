@@ -8,6 +8,9 @@
 <AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.views.ControllerAdminGameView">
     <children>
         <TableView fx:id="tableView" prefHeight="500.0" prefWidth="800.0">
+            <placeholder>
+                <Label text="Brak danych do wyświetlenia"/>
+            </placeholder>
             <columns>
                 <TableColumn fx:id="titleColumn" editable="false" prefWidth="50.0" reorderable="false" text="Tytuł" />
                 <TableColumn fx:id="platformColumn" editable="false" prefWidth="199.0" reorderable="false" text="Platforma" />
@@ -62,7 +65,7 @@
          </children></VBox>
       <VBox prefHeight="300.0" prefWidth="300.0" spacing="50.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="520.0">
          <children>
-            <TextField fx:id="searchField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#searchMethod" promptText="Wyszukaj...">
+            <TextField fx:id="searchField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" onAction="#searchMethod" promptText="Wyszukaj...">
                <padding>
                   <Insets top="10.0" />
                </padding>
